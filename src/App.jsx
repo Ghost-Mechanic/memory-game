@@ -1,9 +1,22 @@
 import { useState, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import './App.css'
 import Card from './Card';
 
 const API_KEY = "45447926-e79c236074a6abe226fa6fbb3";
+
+function shuffle(array) {
+  for (var i = array.length - 1; i > 0; i--) { 
+  
+    // Generate random number 
+    var j = Math.floor(Math.random() * (i + 1));
+               
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+   
+  return array;
+}
 
 function App() {
   const [rulesOpen, setRulesOpen] = useState(false);
@@ -53,6 +66,8 @@ function App() {
       setSelectedImages([...selectedImages, id]);
       points + 1 > highScore ? setHighScore(points + 1) : null;
     }
+
+    setImages(shuffle(images));
   }
 
   return (
