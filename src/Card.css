@@ -1,0 +1,20 @@
+.card {
+    padding: 20px;
+    background-color: rgb(42, 99, 165);
+    border-radius: 12px;
+}
+
+.card-image {
+    border: 2px solid white;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.credit {
+    color: white;
+}
+
+.image-link {
+    color: white;
+    text-decoration: underline;
+}
