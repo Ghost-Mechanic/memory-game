@@ -35,3 +35,29 @@
     color: white;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .fact {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 425px) {
+    .card {
+        padding: 6px;
+    }
+
+    .card-image {
+      width: 100px;
+    }
+
+    .fact {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 320px) {
+    .fact {
+        font-size: 0.6em;
+    }
+}

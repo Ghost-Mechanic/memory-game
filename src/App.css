@@ -50,3 +50,37 @@ body {
 .active {
   border: solid 4px black;
 }
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .how-to-play {
+    font-size: 1em;
+  }
+
+  .num-cards-buttons {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 320px) {
+  .cards {
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .num-cards-buttons {
+    font-size: 0.6em;
+  }
+}

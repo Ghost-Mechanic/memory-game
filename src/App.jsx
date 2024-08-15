@@ -103,7 +103,7 @@ function App() {
         </div>
 
         <div className="num-cards-buttons">
-          <button className={`num-cards-button ${numImages === 6 ? "active" : "inactive" }`} onClick={() => setNumImages(8)}>8 Cards</button>
+          <button className={`num-cards-button ${numImages === 8 ? "active" : "inactive" }`} onClick={() => setNumImages(8)}>8 Cards</button>
           <button className={`num-cards-button ${numImages === 12 ? "active" : "inactive" }`} onClick={() => setNumImages(12)}>12 cards</button>
           <button className={`num-cards-button ${numImages === 20 ? "active" : "inactive" }`} onClick={() => setNumImages(20)}>20 cards</button>
           <button className={`num-cards-button ${numImages === 36 ? "active" : "inactive" }`} onClick={() => setNumImages(36)}>36 cards</button>
