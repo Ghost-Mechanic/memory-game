@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css'
-import Card from './Card';
+import Card from './components/Card';
 
 const API_KEY = "45447926-e79c236074a6abe226fa6fbb3";
 
