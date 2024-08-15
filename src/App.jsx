@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css'
 import Card from './components/Card';
+import Paw from "./assets/paw.png";
 
 const API_KEY = "45447926-e79c236074a6abe226fa6fbb3";
 
@@ -85,18 +86,18 @@ function App() {
     <>
       <div>
         <div>
-          <h1>Memory Game</h1>
-          <button onClick={() => setRulesOpen(!rulesOpen)}>{rulesText}How To Play</button>
+          <h1 className="title"><img className="paw" src={Paw} />  Memory Game  <img className="paw" src={Paw} /></h1>
+          <button className="play-button" onClick={() => setRulesOpen(!rulesOpen)}>{rulesText}How To Play</button>
         </div>
         {rulesOpen ? 
         <div className="rules">
-          <h2>HOW TO PLAY</h2>
-          <p>Earn points by clicking on cards that you have not already clicked on.</p>
-          <p>After each card you click, the cards will be shuffled.</p>
-          <p>You lose your score after clicking on a card you have previously clicked on and the game is reset.</p>
+          <h2 className="title">HOW TO PLAY</h2>
+          <p className="how-to-play">Earn points by clicking on cards that you have not already clicked on.</p>
+          <p className="how-to-play">After each card you click, the cards will be shuffled.</p>
+          <p className="how-to-play">You lose your score after clicking on a card you have previously clicked on and the game is reset.</p>
         </div> : null}
 
-        <div>
+        <div className="points">
           <h3>Points: {points}</h3>
           <h3>High Score: {highScore}</h3>
         </div>

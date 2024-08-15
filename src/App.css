@@ -1,8 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Patrick+Hand&display=swap');
+
+body {
+  background-color: rgb(187, 187, 187);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.title,
+.play-button {
+  font-family: "Luckiest Guy", cursive;
+  color: black;
+}
+
+.paw {
+  width: 1em;
+}
+
+.how-to-play {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.2em;
+  color: black;
+}
+
+.points {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.3em;
+  color: black
 }
 
 .cards {
@@ -15,8 +43,10 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1.2em;
 }
 
 .active {
-  outline: solid 1px black;
+  border: solid 4px black;
 }

@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Patrick+Hand&display=swap');
+
 .card {
     padding: 12px;
     background-color: rgb(42, 99, 165);
     border-radius: 12px;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
     background-color: rgb(85, 160, 245);
     cursor: pointer;
 }
@@ -24,6 +27,7 @@
 }
 
 .fact {
+    font-family: "Patrick Hand", cursive;
     color: white;
 }
 
