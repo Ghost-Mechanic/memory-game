@@ -1,5 +1,5 @@
 .card {
-    padding: 20px;
+    padding: 12px;
     background-color: rgb(42, 99, 165);
     border-radius: 12px;
 }
@@ -7,10 +7,18 @@
 .card-image {
     border: 2px solid white;
     border-radius: 8px;
-    width: 300px;
+    width: 150px;
+    margin-bottom: 0;
 }
 
 .credit {
+    font-size: 0.75em;
+    font-style: italic;
+    color: white;
+    margin-top: 0;
+}
+
+.fact {
     color: white;
 }
 

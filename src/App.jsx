@@ -4,6 +4,7 @@ import Card from './Card';
 
 const API_KEY = "45447926-e79c236074a6abe226fa6fbb3";
 
+// this function shuffles the cards after each click
 function shuffle(array) {
   for (var i = array.length - 1; i > 0; i--) { 
   
@@ -16,6 +17,13 @@ function shuffle(array) {
   }
    
   return array;
+}
+
+// this function returns a random fact from a json file of facts
+function randomFact(facts) {
+  const randomNum = Math.floor(Math.random() * 333);
+
+  return facts.data[randomNum].fact;
 }
 
 function App() {
@@ -35,12 +43,16 @@ function App() {
       try {
         const response = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=cat&image_type=photo&per_page=${numImages}`);
         const data = await response.json();
+
+        const factsResponse = await fetch('https://catfact.ninja/facts?limit=332');
+        const factsData = await factsResponse.json();
     
         const imageUrls = data.hits.map(image => ({
           url: image.webformatURL,
           id: image.id,
           user: image.user,
-          page: image.pageURL
+          page: image.pageURL,
+          fact: randomFact(factsData)
         }));
     
         setImages(imageUrls);
@@ -59,9 +71,9 @@ function App() {
     if (selectedImages.includes(id)) {
       setPoints(0);
       setSelectedImages([]);
+      setNumImages(12);
     }
     else {
-      console.log('test');
       setPoints(points + 1);
       setSelectedImages([...selectedImages, id]);
       points + 1 > highScore ? setHighScore(points + 1) : null;
@@ -92,7 +104,7 @@ function App() {
 
         <div className="cards">
           {loading ? <p>Loading...</p> : images.map(image => 
-            <Card key={image.id} image={image.url} user={image.user} pageUrl={image.page} onClick={() => handleClick(image.id)} />
+            <Card key={image.id} image={image.url} user={image.user} pageUrl={image.page} fact={image.fact} onClick={() => handleClick(image.id)} />
           )}
         </div>
       </div>
