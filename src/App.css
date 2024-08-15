@@ -10,3 +10,13 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
 }
+
+.num-cards-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.active {
+  outline: solid 1px black;
+}

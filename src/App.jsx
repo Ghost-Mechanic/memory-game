@@ -71,7 +71,6 @@ function App() {
     if (selectedImages.includes(id)) {
       setPoints(0);
       setSelectedImages([]);
-      setNumImages(12);
     }
     else {
       setPoints(points + 1);
@@ -92,14 +91,21 @@ function App() {
         {rulesOpen ? 
         <div className="rules">
           <h2>HOW TO PLAY</h2>
-          <p>Earn points by clicking on images that you have not already clicked on.</p>
-          <p>After each image you click, the images will be shuffled.</p>
-          <p>You lose your score after clicking on an image you have previously clicked on and the game is reset.</p>
+          <p>Earn points by clicking on cards that you have not already clicked on.</p>
+          <p>After each card you click, the cards will be shuffled.</p>
+          <p>You lose your score after clicking on a card you have previously clicked on and the game is reset.</p>
         </div> : null}
 
         <div>
           <h3>Points: {points}</h3>
           <h3>High Score: {highScore}</h3>
+        </div>
+
+        <div className="num-cards-buttons">
+          <button className={`num-cards-button ${numImages === 6 ? "active" : "inactive" }`} onClick={() => setNumImages(8)}>8 Cards</button>
+          <button className={`num-cards-button ${numImages === 12 ? "active" : "inactive" }`} onClick={() => setNumImages(12)}>12 cards</button>
+          <button className={`num-cards-button ${numImages === 20 ? "active" : "inactive" }`} onClick={() => setNumImages(20)}>20 cards</button>
+          <button className={`num-cards-button ${numImages === 36 ? "active" : "inactive" }`} onClick={() => setNumImages(36)}>36 cards</button>
         </div>
 
         <div className="cards">

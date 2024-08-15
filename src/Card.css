@@ -4,6 +4,11 @@
     border-radius: 12px;
 }
 
+.card:hover {
+    background-color: rgb(85, 160, 245);
+    cursor: pointer;
+}
+
 .card-image {
     border: 2px solid white;
     border-radius: 8px;
